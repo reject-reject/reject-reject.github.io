@@ -67,3 +67,28 @@
 [data-theme='dark'] #footer-wrap a {
   color: var(--light-grey);
 }
+.layout_post #post {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.layout_post .post-content-cover-bg {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.layout_post #web_bg {
+  display: none !important;
+}
+[data-theme="dark"] .layout_post #post {
+  background: rgba(18,18,18,0.85);
+}
