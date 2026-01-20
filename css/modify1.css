@@ -24,48 +24,38 @@
   }
 }
 .top-img {
-  height: 100vh;
-  max-height: none;
+  height: 56vw;
+  max-height: 400px;
   min-height: 250px;
   margin: -50px -40px 50px;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
   transition: all 0.3s;
-  width: 100%;
-  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .top-img {
+    background-size: contain;
+    background-color: #f8f9fa;
+  }
+  [data-theme='dark'] .top-img {
+    background-color: #1a1a1a;
+  }
 }
 @media screen and (max-width: 768px) {
   .top-img {
-    height: 70vh;
+    height: 230px;
     margin: -36px -14px 36px;
-    background-attachment: scroll;
-  }
-  #page-header.not-home-page {
-    height: 60vh !important;
-  }
-  #page-header #post-info {
-    bottom: 10px !important;
-  }
-  #page-header #page-site-info {
-    top: 100px !important;
   }
 }
-@media screen and (min-width: 1920px) {
-  .top-img {
-    background-size: cover;
-    background-position: center center;
-  }
-  [data-theme='dark'] {
-    filter: brightness(0.8);
-  }
+[data-theme='dark'] .top-img {
+  filter: brightness(0.8);
 }
 #footer:before {
   background-color: rgba(255,255,255,0.5);
