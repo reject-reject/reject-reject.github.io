@@ -67,3 +67,37 @@
 [data-theme='dark'] #footer-wrap a {
   color: var(--light-grey);
 }
+#post {
+  position: relative;
+}
+#post .post-custom-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+#post article.post-content {
+  background-color: rgba(255,255,255,0.85);
+  padding: 20px !important;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .post-custom-bg {
+    background-attachment: scroll;
+  }
+  #post article.post-content {
+    background-color: rgba(255,255,255,0.9);
+    padding: 15px !important;
+  }
+}
